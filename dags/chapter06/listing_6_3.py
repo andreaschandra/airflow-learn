@@ -1,5 +1,4 @@
 from datetime import datetime
-import airflow.utils.dates
 from airflow import DAG
 from airflow.operators.dummy import DummyOperator
 

@@ -1,4 +1,3 @@
-from airflow.hooks.base import BaseHook
 from airflow.hooks.mysql_hook import MySqlHook
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from airflow.models.baseoperator import BaseOperator
