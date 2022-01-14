@@ -10,7 +10,7 @@ dag = DAG(
     dag_id="listing_4_05",
     start_date=airflow.utils.dates.days_ago(1),
     schedule_interval="@hourly",
-    tags=["chapter4"]
+    tags=["chapter4"],
 )
 
 get_time = BashOperator(
@@ -24,6 +24,7 @@ get_time = BashOperator(
     dag=dag,
 )
 
+
 def _get_data(execution_date):
     year, month, day, hour, *_ = execution_date.timetuple()
     url = (
@@ -34,10 +35,12 @@ def _get_data(execution_date):
     request.urlretrieve(url, output_path)
 
 
-get_data = PythonOperator(task_id="get_data", 
-                          python_callable=_get_data,
-                          retries=3,
-                          retry_delay=timedelta(seconds=60),
-                          dag=dag)
+get_data = PythonOperator(
+    task_id="get_data",
+    python_callable=_get_data,
+    retries=3,
+    retry_delay=timedelta(seconds=60),
+    dag=dag,
+)
 
 get_time >> get_data
