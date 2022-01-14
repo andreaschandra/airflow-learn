@@ -37,11 +37,6 @@ jobs:
       - name: Run Flake8
         run : flake8 --max-line-length 200 --ignore=F541
         
-      - name: Install Pylint
-        run: pip install pylint
-      - name: Run Pylint
-        run: find . -name  "*.py" | xargs pylint --output-format=colorized
-        
       - name: Install Black
         run: pip install black
       - name: Run Black
