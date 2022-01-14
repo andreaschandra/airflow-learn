@@ -8,7 +8,7 @@ dag = DAG(
     start_date=datetime(2022, 1, 1),
     schedule_interval="@daily",
     concurrency=1,
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 
 create_metrics = DummyOperator(task_id="create_metrics", dag=dag)
