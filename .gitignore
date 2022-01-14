@@ -1,0 +1,11 @@
+*.err
+*.out
+*.pid
+*.log
+*.db
+*.cert
+*.key
+*.cfg
+logs/
+.ipynb_checkpoints
+
