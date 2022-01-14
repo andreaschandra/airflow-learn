@@ -6,7 +6,7 @@ dag = DAG(
     dag_id="listing_4_01",
     start_date=airflow.utils.dates.days_ago(3),
     schedule_interval="@hourly",
-    tags=["chapter4"]
+    tags=["chapter4"],
 )
 
 echo_params = BashOperator(
