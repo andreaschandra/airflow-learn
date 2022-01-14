@@ -13,7 +13,7 @@ dag = DAG(
     description="Download rocket pictures of recently launched rockets.",
     start_date=airflow.utils.dates.days_ago(14),
     schedule_interval="@daily",
-    tags=["chapter2"]
+    tags=["chapter2"],
 )
 
 download_launches = BashOperator(

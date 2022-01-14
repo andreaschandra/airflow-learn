@@ -11,7 +11,7 @@ dag = DAG(
     schedule_interval="@daily",
     start_date=datetime(2019, 1, 1),
     end_date=datetime(2019, 1, 5),
-    tags=["chapter3"]
+    tags=["chapter3"],
 )
 
 fetch_events = BashOperator(

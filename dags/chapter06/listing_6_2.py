@@ -10,7 +10,7 @@ dag = DAG(
     schedule_interval="0 16 * * *",
     description="A batch workflow for ingesting supermarket promotions data.",
     default_args={"depends_on_past": True},
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 
 

@@ -16,7 +16,7 @@ dag = DAG(
     schedule_interval="@hourly",
     template_searchpath="/tmp",
     max_active_runs=1,
-    tags=["chapter4"]
+    tags=["chapter4"],
 )
 
 

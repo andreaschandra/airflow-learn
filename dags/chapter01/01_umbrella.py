@@ -9,7 +9,7 @@ dag = DAG(
     description="Umbrella example with DummyOperators.",
     start_date=airflow.utils.dates.days_ago(5),
     schedule_interval="@daily",
-    tags=["chapter1"]
+    tags=["chapter1"],
 )
 
 fetch_weather_forecast = DummyOperator(task_id="fetch_weather_forecast", dag=dag)

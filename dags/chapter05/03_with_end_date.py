@@ -11,7 +11,7 @@ dag = DAG(
     schedule_interval="@daily",
     start_date=dt.datetime(year=2018, month=12, day=31),
     end_date=dt.datetime(year=2019, month=1, day=5),
-    tags=["chapter5"]
+    tags=["chapter5"],
 )
 
 fetch_events = BashOperator(
@@ -37,7 +37,10 @@ def _calculate_stats(input_path, output_path):
 calculate_stats = PythonOperator(
     task_id="calculate_stats",
     python_callable=_calculate_stats,
-    op_kwargs={"input_path": "/home/andreas/data/events.json", "output_path": "/home/andreas/data/stats.csv"},
+    op_kwargs={
+        "input_path": "/home/andreas/data/events.json",
+        "output_path": "/home/andreas/data/stats.csv",
+    },
     dag=dag,
 )
 

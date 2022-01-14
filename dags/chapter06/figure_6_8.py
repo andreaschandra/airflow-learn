@@ -8,7 +8,7 @@ dag = DAG(
     start_date=airflow.utils.dates.days_ago(14),
     schedule_interval="0 16 * * *",
     description="Create a file /data/supermarket1/data.csv, and behold a sensor deadlock.",
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 
 create_metrics = DummyOperator(task_id="create_metrics", dag=dag)

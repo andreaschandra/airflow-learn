@@ -10,7 +10,7 @@ with DAG(
     dag_id="12_taskflow",
     start_date=airflow.utils.dates.days_ago(3),
     schedule_interval="@daily",
-    tags=["chapter5"]
+    tags=["chapter5"],
 ) as dag:
 
     @task

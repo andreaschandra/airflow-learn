@@ -8,25 +8,25 @@ dag1 = DAG(
     dag_id="figure_6_19_dag_1",
     start_date=airflow.utils.dates.days_ago(3),
     schedule_interval="0 0 * * *",
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 dag2 = DAG(
     dag_id="figure_6_19_dag_2",
     start_date=airflow.utils.dates.days_ago(3),
     schedule_interval="0 0 * * *",
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 dag3 = DAG(
     dag_id="figure_6_19_dag_3",
     start_date=airflow.utils.dates.days_ago(3),
     schedule_interval="0 0 * * *",
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 dag4 = DAG(
     dag_id="figure_6_19_dag_4",
     start_date=airflow.utils.dates.days_ago(3),
     schedule_interval=None,
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 
 DummyOperator(task_id="etl", dag=dag1)

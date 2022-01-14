@@ -10,7 +10,7 @@ dag = DAG(
     start_date=airflow.utils.dates.days_ago(14),
     schedule_interval="0 16 * * *",
     description="A batch workflow for ingesting supermarket promotions data, demonstrating the PythonSensor.",
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 
 create_metrics = DummyOperator(task_id="create_metrics", dag=dag)

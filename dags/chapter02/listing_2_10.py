@@ -12,7 +12,7 @@ dag = DAG(
     dag_id="listing_2_10",
     start_date=airflow.utils.dates.days_ago(14),
     schedule_interval="@daily",
-    tags=["chapter2"]
+    tags=["chapter2"],
 )
 
 download_launches = BashOperator(

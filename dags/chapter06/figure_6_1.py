@@ -8,7 +8,7 @@ dag = DAG(
     schedule_interval="0 16 * * *",
     description="A batch workflow for ingesting supermarket promotions data, demonstrating the FileSensor.",
     default_args={"depends_on_past": True},
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 
 create_metrics = DummyOperator(task_id="create_metrics", dag=dag)

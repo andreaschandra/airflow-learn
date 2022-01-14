@@ -34,7 +34,7 @@ with DAG(
     dag_id="03_branch_dag",
     start_date=airflow.utils.dates.days_ago(3),
     schedule_interval="@daily",
-    tags=["chapter5"]
+    tags=["chapter5"],
 ) as dag:
     start = DummyOperator(task_id="start")
 

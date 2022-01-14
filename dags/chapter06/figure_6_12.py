@@ -11,7 +11,7 @@ dag = DAG(
     schedule_interval="0 16 * * *",
     description="A batch workflow for ingesting supermarket promotions data.",
     default_args={"depends_on_past": True},
-    tags=["chapter6"]
+    tags=["chapter6"],
 )
 
 
@@ -44,8 +44,14 @@ for supermarket_id in [1, 2, 3, 4]:
         task_id=f"notify_new_data_supermarket_{supermarket_id}", dag=dag
     )
 
-    wait >> copy >> process >> generate_metrics >> [
-        compute_differences,
-        notify_new_data,
-    ]
+    (
+        wait
+        >> copy
+        >> process
+        >> generate_metrics
+        >> [
+            compute_differences,
+            notify_new_data,
+        ]
+    )
     compute_differences >> update_dashboard

@@ -13,7 +13,7 @@ dag = DAG(
     start_date=dt.datetime(year=2019, month=1, day=1),
     end_date=dt.datetime(year=2019, month=1, day=5),
     catchup=False,
-    tags=["chapter3"]
+    tags=["chapter3"],
 )
 
 fetch_events = BashOperator(

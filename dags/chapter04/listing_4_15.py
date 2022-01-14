@@ -10,7 +10,7 @@ dag = DAG(
     start_date=airflow.utils.dates.days_ago(1),
     schedule_interval="@hourly",
     max_active_runs=1,
-    tags=["chapter4"]
+    tags=["chapter4"],
 )
 
 

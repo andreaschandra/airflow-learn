@@ -6,7 +6,7 @@ dag = DAG(
     dag_id="listing_4_07",
     start_date=airflow.utils.dates.days_ago(1),
     schedule_interval="@daily",
-    tags=["chapter4"]
+    tags=["chapter4"],
 )
 
 
