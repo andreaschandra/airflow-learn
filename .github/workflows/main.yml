@@ -35,7 +35,7 @@ jobs:
       - name: Install Flake8
         run : pip install  flake8
       - name: Run Flake8
-        run : flake8
+        run : flake8 --max-line-length 200 --ignore=F541
         
       - name: Install Pylint
         run: pip install pylint
